@@ -1,0 +1,32 @@
+{% extends "/Base/base_nrps.html" %}
+{% block title %}
+<title>Tutorial</title>
+{% endblock %}
+
+{% block content %}
+<div id="tutorial" class="container-fluid">
+    <h2>Tutorials</h2>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Prediction</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        <br>
+        <div class="row">
+           <div class = "col-lg-12" >
+               <p>Everyday, new bacteria are being sequenced and added to the genomic database.
+               Some of them might have novel and unique inter-modular linkers (IMLs).
+               Thus <a href="{{ url_for('doPrediction') }}"> NRPS Parser </a> will help users to identify and extract all new IMLs and
+               in turn this will help us expanding and updating our IMLs database.</p>
+           </div>
+      </div>
+        <br>
+        <iframe width="420" height="345" src="https://www.youtube.com/embed/IdZs2HhMPV4" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

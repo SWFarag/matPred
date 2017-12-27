@@ -1,0 +1,35 @@
+{% extends '/Base/base_nrps.html' %}
+{% block title %}
+<title>Predictor</title>
+{% endblock %}
+{% block heading %} {{super()}} {% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+  <ul class="nav nav-tabs nav-justified">
+    <li><a href="{{ url_for('main') }}" style="font-size: large">Home</a></li>
+    <li> <a href="{{ url_for('doPrediction') }}" style="font-size: large">Prediction</a></li>
+  </ul>
+</div>
+<div id="atca_units" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" >
+                <div class="header">
+                    <h2 class="text-muted">Upload structure-data files (SDF) or molfile (MDL):</h2>
+                    <h5 class="text-muted"> Please make sure the uploaded file(s) are sdf/mole files with the following extension .sdf or .mol:</h5>
+                </div>
+                <br>
+            </div>
+
+            <div class="col-sm-12">
+                <form style="font-size: large" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <input type="file" multiple="" name="file[]" class="span3" /><br />
+                    <input type="submit" value="Upload"  class="span2" onclick="loading22()">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %} {{super()}} {% endblock %}

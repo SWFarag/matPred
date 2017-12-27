@@ -1,0 +1,9 @@
+flask
+flask-security
+sqlalchemy
+pandas
+flask-WTF
+bcrypt
+Flask-Babel
+dropbox
+Werkzeug

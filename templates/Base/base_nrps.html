@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% block title %} {% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='../static/css/home.css') }}"> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- Custom fonts for this template -->
+        <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='../static/css/home.css') }}">
+
+        {% block javascript %} {% endblock %}
+
+       </head>
+
+    <body>
+        <div id="content_all">
+          <div id="headerBlock"  class="container-fluid">
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="{{ url_for('main') }}"><h4 class="active text-danger">Mat-Pred</h4></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('getTutorial') }}"><h4>Tutorial</h4></a></li>
+                    <li><a href="{{ url_for('getuploadExamples') }}"><h4>Example of Upload Files</h4> </a></li>
+                    <li><a href="{{ url_for('getinfo') }}"><h4>Contact</h4></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="{{ url_for('security.logout') }}"><h4 class="text-white">Logout</h4></a></li>
+                  <li><a href="{{ url_for('security.logout') }}"><h4 class="text-white"></h4></a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class= "container-fluid">
+                <div class="row">
+                  <div class="col-md-2" align=left>
+                    <a href="{{ url_for('main') }}"><img src="/static/img/matIcon.png" style="width: 150px"></a>
+                  </div>
+                  <div class="col-md-8" align=center>
+                    <header class="masthead bg-warning text-white text-center">
+                      <div class="container text-danger">
+                        <h1 class="text-uppercase mb-0">Mat-Pred</h1>
+                        <hr class="star-light" style="border-color: black;">
+                        <h2 class="font-weight-light mb-0 text-uppercase">Awesome Material Science Prediction Tool</h2>
+                      </div>
+                    </header>
+                  </div>
+                  <div class="col-md-2" align=right>
+                      <a href="https://chembench.mml.unc.edu/" target="_blank"><img src="/static/img/Screenshot%202017-03-09%2022.24.02.png" style="width: 250px"></a>
+                  </div>
+                </div>
+                <hr style="height:3px;border:none;color:#333;background-color:#333;"/>
+            </div>
+          </div>
+          <div id="contentBlock" class="container-fluid">
+
+                {% block content %} {% endblock %}
+
+            </div>
+          <div id="footerBlock" class="container-fluid">
+            <hr style="height:3px;border:none;color:#333;background-color:#333;"/>
+            <div class="row bg-success">
+              <div class="col-md-4" align=center>
+                <h4 class="text-uppercase">Around the Web</h4>
+                <img class="img-fluid" src="/static/img/nano.jpg" alt="">
+              </div>
+              <div class="col-md-4 bg-danger" align=center>
+                <h4 class="text-uppercase mb-4">About Mat-Pred</h4>
+                <p class="lead mb-0 text-uppercase">If you found Mat-Pred useful please cite us:
+                  <a href="http://startbootstrap.com">Mat-Pred tool</a>.</p>
+              </div>
+              <div class="col-md-4" align=center>
+                <h4 class="text-uppercase">Around the Web</h4>
+                <img class="img-fluid" src="/static/img/nano.jpg" alt="">
+              </div>
+            </div>
+            <div class="row bg-success">
+              <div class="copyright py-4 text-center text-white">
+                <div class="container">
+                  <small>Copyright &copy; Your Website 2017</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bootstrap core JavaScript -->
+        <script src="/static/vendor/jquery/jquery.min.js"></script>
+        <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="/static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+        <!-- Contact Form JavaScript -->
+        <script src="/static/js/jqBootstrapValidation.js"></script>
+        <script src="/static/js/contact_me.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="/static/js/freelancer.min.js"></script>
+
+    </body>
+</html>
